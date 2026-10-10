@@ -42,8 +42,11 @@ import {
   YAxis,
 } from "recharts";
 
+const API_BASE_URL =
+  import.meta.env.VITE_API_URL || "https://sweb-be.onrender.com/api";
+
 const API = axios.create({
-  baseURL: "/api",
+  baseURL: API_BASE_URL,
 });
 
 const navItems = [
